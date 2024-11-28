@@ -1,0 +1,415 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2a9d8f;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #005f73;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+/* Navbar Hover Effect */
+.navbar-brand:hover {
+  color: #98c8b1; /* Optional: add hover effect to the brand text */
+}
+
+.brand-shape {
+  background-color: #8d99ae;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.brand-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #98c8b1;
+}
+
+.dropdown-menu {
+  background-color: #005f73;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.dropdown-item:hover {
+  background-color: #8d99ae;
+  color: #ffffff;
+}
+
+/* Banner Styling */
+.banner {
+  background-color: white; /* Set background to white */
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black; /* Change text color to black */
+}
+
+.banner-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: black; /* Black text for title */
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: black; /* Black text for paragraph */
+}
+.banner img{
+  margin-left: 20px;
+}
+.banner .btn {
+  background-color: #2a9d8f; /* Button color */
+  padding: 10px 30px;
+  font-size: 18px;
+  color: white; /* White text on button */
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  transition: background-color 0.3s ease; /* Added hover effect */
+}
+
+.banner .btn:hover {
+  background-color: #006C75; /* Softer, complementary color */
+  color: white; /* Keep button text white on hover */
+}
+
+
+#hero1 {
+  background-color: rgb(30, 28, 25);
+}
+
+/* Services Section */
+#services {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #005f73;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #333;
+}
+
+.fas {
+  color: #2a9d8f;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .banner-title {
+    font-size: 36px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .navbar-brand .brand-text {
+    font-size: 20px;
+  }
+}
+
+
+.why-choose-us {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.why-choose-image {
+  flex: 1;
+  max-width: 50%; /* Ensures image takes half width */
+  text-align: center;
+}
+
+.why-choose-image img {
+  width: 100%; /* Makes the image responsive */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+.why-choose-content {
+  flex: 1.5;
+  padding-left: 30px;
+}
+
+.why-choose-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #006C75;
+  margin-bottom: 20px;
+}
+
+.choose-items {
+  margin-top: 20px;
+}
+
+.choose-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.choose-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #006C75;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choose-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container.d-flex {
+      flex-direction: column; /* Stacks image and content vertically */
+  }
+
+  .why-choose-content {
+      padding-left: 0; /* Removes padding for smaller screens */
+      text-align: center;
+  }
+
+  .choose-items {
+      text-align: left; /* Align items to the left on small screens */
+  }
+}
+
+
+.special-doctors {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #006C75;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.doctor-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px);
+}
+
+.doctor-img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+  border: 2px solid black;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #006C75;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background-color: #2a9d8f; /* Green accent for consistency */
+  transform: scale(1.1);
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: #12263A; /* Dark blue */
+  color: #fff;
+  padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.quick-links,
+.patient-resources,
+.healthcare-providers,
+.social-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.quick-links h4,
+.patient-resources h4,
+.healthcare-providers h4,
+.social-links h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.quick-links ul,
+.patient-resources ul,
+.healthcare-providers ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links ul li,
+.patient-resources ul li,
+.healthcare-providers ul li {
+  margin-bottom: 10px;
+}
+
+.quick-links ul li a,
+.patient-resources ul li a,
+.healthcare-providers ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer .quick-links ul li a:hover,
+.footer .patient-resources ul li a:hover,
+.footer .healthcare-providers ul li a:hover {
+  color: #fff; /* Ensure the links stand out */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #1F3B4D; /* Slightly lighter dark blue */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background-color: #2a9d8f; /* Green accent */
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  border-top: 1px solid #1F3B4D;
+  padding-top: 15px;
+}

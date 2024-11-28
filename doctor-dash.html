@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #eef2f7;
+    }
+
+    /* Sidebar Styling */
+    .sidebar {
+      width: 240px;
+      background-color: #34495e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      background-color: #2c3e50;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sidebar ul li:hover,
+    .sidebar ul li.active {
+      background-color: #1abc9c;
+      color: white;
+    }
+
+    /* Main Content Area */
+    .main-content {
+      flex-grow: 1;
+      padding: 20px 40px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .header .actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .actions span {
+      margin-right: 20px;
+      font-size: 16px;
+      color: #34495e;
+    }
+
+    .actions a {
+      font-size: 14px;
+      text-decoration: none;
+      color: white;
+      background-color: #e74c3c;
+      padding: 10px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .actions a:hover {
+      background-color: #c0392b;
+    }
+
+    .dashboard-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #34495e;
+      margin-bottom: 15px;
+    }
+
+    .card .icon {
+      font-size: 40px;
+      color: #1abc9c;
+      margin-bottom: 15px;
+    }
+
+    .card span {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Hospital Management System</h2>
+    <ul>
+      <li class="active">Dashboard</li>
+      <li>Profile</li>
+      <li>Patient</li>
+      <li>Appointment</li>
+      <li>Report</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="header">
+      <h1>Doctor's Dashboard</h1>
+      <div class="actions">
+        <span>hermex</span>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h4>My Profile</h4>
+        <div class="icon">👤</div>
+      </div>
+      <div class="card">
+        <h4>Total Patient</h4>
+        <div class="icon">🛌</div>
+        <span>1</span>
+        <p>Patients currently under treatment.</p>
+      </div>
+      <div class="card">
+        <h4>Total Appointment</h4>
+        <div class="icon">📅</div>
+        <span>0</span>
+        <p>Appointments scheduled for today.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", "sans-serif";
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #00b3ff;
+    }
+
+    .form form .error-text {
+      color: #d9534f;
+      padding: 6px 10px;
+      text-align: center;
+      border-radius: 4px;
+      background: #ffe3e5;
+      border: 1px solid #dfa5ab;
+      margin-bottom: 10px;
+      font-size: 14px;
+      display: none; /* Hidden by default */
+    }
+
+    ::selection {
+      color: #ececec;
+      background: #00b3ff;
+    }
+
+    .form {
+  position: relative;
+  background: #f2f3f7;
+  border-radius: 12px;
+  box-shadow: -3px 3px 10px -5px rgba(0, 0, 0, 2);
+  max-width: 500px;
+  width: 100%;
+  height: 380px;
+  display: flex; /* Make the form a flex container */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+}
+
+.form h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px; /* Optional: Space below the heading */
+}
+
+
+
+    .grid-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .input {
+  display: block; /* Ensures input fields stack vertically */
+  width: 100%; /* Makes the container take full width */
+  margin-bottom: 15px; /* Adds space between input fields */
+}
+
+    .input label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .input input[type="email"],
+.input input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  display: block; /* Ensures inputs do not attempt inline positioning */
+}
+
+    .input input:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .profile-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 75px;
+      height: 75px;
+      margin: 18px 30px;
+      background: #f2f3f7;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      border: 4px solid #006692;
+    }
+
+    .file-upload {
+      position: relative;
+      top: 10px;
+      width: 100%;
+      height: 50px;
+      margin: 20px 0;
+      background: linear-gradient(to right, #007bff, #0056b3);
+      border-radius: 25px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .file-upload input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0; /* Hide the actual input */
+      cursor: pointer;
+    }
+
+    .file-upload span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none; /* Prevent pointer interaction with the text */
+    }
+
+    .file-upload:hover {
+      background: linear-gradient(to right, #0056b3, #007bff);
+    }
+
+    .submit input {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit input:hover {
+      background: #0056b3;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .grid-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form">
+    <h2>Login Form</h2>
+    <form action="">
+      <div class="error-text">Please fill in all fields.</div> <!-- This will now display if there's an error -->
+      <div class="grid-details">
+        <div class="input">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input">
+          <label>Password</label>
+          <input type="password" name="pass" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="profile-img">
+        <div class="file-upload">
+          <span>Upload Image</span>
+          <input type="file" id="image-preview" class="file-input" required accept="image/*"
+                 oninvalid="this.setCustomValidity('Select an image file')" 
+                 oninput="this.setCustomValidity('')">
+        </div>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Login Now" class="button">
+      </div>
+    </form>
+    <div class="link">Not Signed Up? <a href="#">Signup Now</a></div>
+  </div>
+</body>
+</html>

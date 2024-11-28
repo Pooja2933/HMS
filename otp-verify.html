@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .otp-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .otp-input-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .otp-input {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      text-align: center;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .otp-input:focus {
+      border-color: #4c8bf5;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #4c8bf5;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #3a75d7;
+    }
+
+    .resend-container {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .resend-container a {
+      color: #4c8bf5;
+      text-decoration: none;
+    }
+
+    .resend-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="otp-container">
+    <h2>OTP Verification</h2>
+    <p>Enter the OTP sent to your email or phone</p>
+    <form id="otp-form">
+      <div class="otp-input-group">
+        <input type="text" maxlength="1" class="otp-input" id="otp-1" required>
+        <input type="text" maxlength="1" class="otp-input" id="otp-2" required>
+        <input type="text" maxlength="1" class="otp-input" id="otp-3" required>
+        <input type="text" maxlength="1" class="otp-input" id="otp-4" required>
+      </div>
+      <button type="submit" class="submit-btn">Verify OTP</button>
+    </form>
+    <div class="resend-container">
+      <p>Didn't receive the OTP? <a href="#" onclick="resendOtp()">Resend OTP</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Automatically move to the next input field when a character is entered
+    const otpInputs = document.querySelectorAll('.otp-input');
+
+    otpInputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        if (input.value.length === 1 && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+      });
+    });
+
+    // Handle form submission
+    const otpForm = document.getElementById('otp-form');
+    otpForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get the OTP value from inputs
+      let otp = '';
+      otpInputs.forEach(input => {
+        otp += input.value;
+      });
+
+      if (otp.length === otpInputs.length) {
+        alert(`OTP Submitted: ${otp}`);
+        // You can now submit the OTP to the server for verification
+      } else {
+        alert('Please enter the complete OTP');
+      }
+    });
+
+    // Resend OTP function (for demo purposes)
+    function resendOtp() {
+      alert('OTP has been resent to your email/phone!');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medimoor</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Navbar Section -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #006C75;">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <span class="brand-shape d-inline-block text-white" style="background-color: #2a9d8f; padding: 10px; border-radius: 50%;">M</span>
+                    <span class="brand-text fw-7 text-white" style="font-size: 24px;">Medimoor</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Login
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                                <a class="dropdown-item" href="#" onclick="location.href='pregister-login.html';">Doctor</a>
+                                <a class="dropdown-item" href="#" onclick="location.href='pregister-login.html';">Patient</a>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner Section -->
+        <div class="banner" id="hero1">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-md-6">
+                        <div class="content-wrapper">
+                            <h1 class="banner-title text-white display-4">Virtual Healthcare <br> For You</h1>
+                            <p class="text-white">Medimoor provides progressive, affordable healthcare, accessible on mobile and online for everyone.</p>
+                            <a href="#" class="btn btn-primary btn-lg">Consult Today</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/bpm_helthcre.jpg" alt="Healthcare" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Services Section -->
+        <section id="services" class="container mt-5">
+            <h2 class="text-center text-primary mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-calendar-check fa-3x text-primary mb-3"></i>
+                        <h4 class="service-title">Appointment Booking</h4>
+                        <p class="service-description">Easily book appointments with doctors through our platform, ensuring you get timely consultations from the comfort of your home.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-prescription fa-3x text-primary mb-3"></i>
+                        <h4 class="service-title">Prescription</h4>
+                        <p class="service-description">Get your prescriptions online after consulting with a doctor. We provide convenient delivery to your doorstep.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-heartbeat fa-3x text-primary mb-3"></i>
+                        <h4 class="service-title">Health Monitoring</h4>
+                        <p class="service-description">Monitor your health vitals, such as heart rate, blood pressure, and more, with regular tracking and health insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="container d-flex align-items-center">
+                <!-- Image Section -->
+                <div class="why-choose-image">
+                    <img src="images/cute.png" alt="Doctor with stethoscope">
+                </div>
+        
+                <!-- Content Section -->
+                <div class="why-choose-content">
+                    <h2 class="text-primary">Why Choose Us</h2>
+                    <div class="choose-items">
+                        <div class="choose-item d-flex align-items-start">
+                            <div class="choose-icon">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <p><strong>Comprehensive Healthcare Solutions:</strong> Our platform provides seamless integration of appointment booking, health monitoring, and medical records, ensuring all your needs are met efficiently.</p>
+                        </div>
+                        <div class="choose-item d-flex align-items-start">
+                            <div class="choose-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <p><strong>Secure & Private:</strong> We prioritize your data security with advanced encryption and privacy policies, so your medical records and personal information are safe.</p>
+                        </div>
+                        <div class="choose-item d-flex align-items-start">
+                            <div class="choose-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <p><strong>Patient-Centric Approach:</strong> Designed with a focus on improving patient experience, our system simplifies communication with doctors and enables access to vital information anytime.</p>
+                        </div>
+                        <div class="choose-item d-flex align-items-start">
+                            <div class="choose-icon">
+                                <i class="fas fa-briefcase-medical"></i>
+                            </div>
+                            <p><strong>Real-Time Accessibility:</strong> Access medical histories, prescriptions, and real-time health monitoring from anywhere, enabling proactive healthcare decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="special-doctors">
+            <div class="container text-center">
+                <h2 class="section-title">Our Special Doctors</h2>
+                <div class="row">
+                    <!-- Doctor 1 -->
+                    <div class="col-md-4">
+                        <div class="doctor-card">
+                            <img src="images/gal2.jpg" alt="Doctor 1" class="doctor-img">
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Doctor 2 -->
+                    <div class="col-md-4">
+                        <div class="doctor-card">
+                            <img src="images/gal3.jpg" alt="Doctor 2" class="doctor-img">
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Doctor 3 -->
+                    <div class="col-md-4">
+                        <div class="doctor-card">
+                            <img src="images/gal5.jpg" alt="Doctor 3" class="doctor-img">
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Quick Links Section -->
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#patients">Patient Portal</a></li>
+                        <li><a href="#appointments">Book an Appointment</a></li>
+                    </ul>
+                </div>
+                <!-- Patient Resources Section -->
+                <div class="patient-resources">
+                    <h4>Patient Resources</h4>
+                    <ul>
+                        <li><a href="#insurance">Insurance Information</a></li>
+                        <li><a href="#patient-rights">Patient Rights</a></li>
+                        <li><a href="#medical-records">Medical Records</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Healthcare Providers Section -->
+                <div class="healthcare-providers">
+                    <h4>Healthcare Providers</h4>
+                    <ul>
+                        <li><a href="#doctors">Our Doctors</a></li>
+                        <li><a href="#nurses">Nurses & Staff</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Section -->
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Healthcare System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
